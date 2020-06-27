@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hierarchy render by canvas</title>
+    <style>
+      body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+      }
+      .canvas-box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 40%;
+      }
+      .canvas-box .canvas-item {
+        display: flex;
+        flex-direction: row;
+        width: 120%;
+        position: absolute;
+        height: 25%;
+        left: -10%;
+      }
+      .canvas-box canvas {
+        width: 100%;
+      }
+      .canvas {
+        top: 0;
+        height: 35%;
+      }
+      .canvas1 {
+        top: 28%;
+        height: 32%;
+      }
+      .canvas2 {
+        top: 46%;
+        height: 32%;
+      }
+      .canvas3 {
+        bottom: 0;
+        height: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas-box">
+      <div class="canvas-item canvas" >
+        <canvas id="canvas" width="1500" height="240"></canvas>
+      </div>
+      <div class="canvas-item canvas1" >
+        <!-- <img v-if="percent1>33" class="shine" src="../../../../assets/images/retail/icon-shine.png"/> -->
+        <canvas id="canvas1" width="750" height="250"></canvas>
+      </div>
+      <div class="canvas-item canvas2">
+        <canvas id="canvas2" width="750" height="250"></canvas>
+      </div>
+      <div class="canvas-item canvas3">
+        <canvas id="canvas3" width="750" height="270"></canvas>
+      </div>
+    </div>
+    <script src="https://d3js.org/d3-hierarchy.v1.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
