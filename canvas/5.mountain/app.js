@@ -1,7 +1,6 @@
 const rc = rough.canvas(document.querySelector("canvas"));
 const hillOpts = {
   roughness: 2.8,
-  stroke: "green",
   strokeWidth: 2,
   fill: "blue",
 };
